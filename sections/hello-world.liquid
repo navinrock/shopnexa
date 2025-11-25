@@ -1,0 +1,43 @@
+{% style  %} 
+
+.hello-world {
+    color: {{section.settings.bg_color}};
+}
+
+{% endstyle %}
+
+<h1 class="hello-world" style="background-color: {{ section.settings.background_color }};">
+    {{ section.settings.title }}
+</h1>
+
+{% schema %}
+  {
+    "name": "Hello World",
+    "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default" : "Hello World",
+        },
+        {
+          "type": "color",
+          "id": "bg_color",
+          "label": "Backgound Color",
+          "default": "#000000"
+        },
+        {
+          "type": "color_background",
+          "id": "background_color",
+          "label": "Background Color",
+          "default": "#000000"
+        },
+        
+    ],
+    "presets": [
+      {
+        "name": "Hello World"
+      }
+    ]
+  }
+{% endschema %}
