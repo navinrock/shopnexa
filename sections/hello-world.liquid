@@ -1,38 +1,90 @@
-{% style  %} 
+<div style="text-align: {{ section.settings.text_alighment }}">
+  {%- for block in section.blocks -%}
 
-.hello-world {
-    color: {{section.settings.bg_color}};
-}
+    {%- case block.type -%}
+      {%- when 'title' -%}
+        <h2 style="color: {{ block.settings.font_color }}; background-color: {{ block.settings.background_color }};">
+          {{ block.settings.text }}
+        </h2>
+      {%- when 'subtitle' -%}
+        <h5 style="color: {{ block.settings.font_color }}; background-color: {{ block.settings.background_color }};">
+          {{ block.settings.text }}
+        </h5>
+    {%- endcase -%}
 
-{% endstyle %}
-
-<h1 class="hello-world" style="background-color: {{ section.settings.background_color }};">
-    {{ section.settings.title }}
-</h1>
+  {%- endfor -%}
+</div>
 
 {% schema %}
   {
     "name": "Hello World",
     "settings": [
-        {
-          "type": "text",
-          "id": "title",
-          "label": "Title",
-          "default" : "Hello World",
-        },
-        {
-          "type": "color",
-          "id": "bg_color",
-          "label": "Backgound Color",
-          "default": "#000000"
-        },
-        {
-          "type": "color_background",
-          "id": "background_color",
-          "label": "Background Color",
-          "default": "#000000"
-        },
-        
+      {
+        "type": "select",
+        "id": "text_alighment",
+        "label": "Text Alighment",
+        "default": "center",
+        "info": "Section Text alignment",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          }, {
+            "value": "center",
+            "label": "Center"
+          }, {
+            "value": "right",
+            "label": "Right"
+          }
+        ]
+      }
+    ],
+    "blocks": [
+      {
+        "type": "title",
+        "name": "Title",
+        "settings": [
+          {
+            "type": "text",
+            "id": "text",
+            "label": "Title Text",
+            "default": "Your Title Here"
+          }, {
+            "type": "color",
+            "id": "font_color",
+            "label": "Font Color",
+            "default": "#fff"
+          }, {
+            "type": "color",
+            "id": "background_color",
+            "label": "Background Color",
+            "default": "#000000"
+          }
+
+        ]
+      }, {
+        "type": "subtitle",
+        "name": "Subtitle",
+        "settings": [
+          {
+            "type": "text",
+            "id": "text",
+            "label": "Subtitle Text",
+            "default": "Your Subtitle Here"
+          }, {
+            "type": "color",
+            "id": "font_color",
+            "label": "Font Color",
+            "default": "#fff"
+          }, {
+            "type": "color",
+            "id": "background_color",
+            "label": "Background Color",
+            "default": "#000000"
+          }
+
+        ]
+      }
     ],
     "presets": [
       {
