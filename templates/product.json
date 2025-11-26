@@ -103,11 +103,19 @@
             "text": "<p></p>{{ product.metafields.custom.influencer.value.description | metafield_tag }}",
             "text_style": "body"
           }
+        },
+        "button_yfyqEd": {
+          "type": "button",
+          "settings": {
+            "button_label": "View Details",
+            "button_link": "{{ product.metafields.custom.influencer.value.system.url }}"
+          }
         }
       },
       "block_order": [
         "heading_KXKzaQ",
-        "text_apVcGt"
+        "text_apVcGt",
+        "button_yfyqEd"
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
