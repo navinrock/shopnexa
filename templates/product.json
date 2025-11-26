@@ -87,6 +87,44 @@
         "padding_bottom": 0
       }
     },
+    "image_with_text_JBefGe": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_KXKzaQ": {
+          "type": "heading",
+          "settings": {
+            "heading": "{{ product.metafields.custom.influencer.value.name.value }}",
+            "heading_size": "h1"
+          }
+        },
+        "text_apVcGt": {
+          "type": "text",
+          "settings": {
+            "text": "<p></p>{{ product.metafields.custom.influencer.value.description | metafield_tag }}",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_KXKzaQ",
+        "text_apVcGt"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "{{ product.metafields.custom.influencer.value.image.value }}",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "related-products": {
       "type": "related-products",
       "settings": {
@@ -107,6 +145,7 @@
   },
   "order": [
     "main",
+    "image_with_text_JBefGe",
     "related-products"
   ]
 }
