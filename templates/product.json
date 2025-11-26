@@ -12,6 +12,10 @@
     "main": {
       "type": "main-product",
       "blocks": {
+        "matrial_T8TTY4": {
+          "type": "matrial",
+          "settings": {}
+        },
         "title": {
           "type": "title",
           "settings": {}
@@ -58,6 +62,7 @@
         }
       },
       "block_order": [
+        "matrial_T8TTY4",
         "title",
         "vendor",
         "variant_picker",
