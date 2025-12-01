@@ -12,10 +12,6 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "matrial_T8TTY4": {
-          "type": "matrial",
-          "settings": {}
-        },
         "title": {
           "type": "title",
           "settings": {}
@@ -25,12 +21,6 @@
           "settings": {
             "text": "{{ product.vendor }}",
             "text_style": "body"
-          }
-        },
-        "variant_picker": {
-          "type": "variant_picker",
-          "settings": {
-            "picker_type": "button"
           }
         },
         "quantity_selector": {
@@ -62,10 +52,8 @@
         }
       },
       "block_order": [
-        "matrial_T8TTY4",
         "title",
         "vendor",
-        "variant_picker",
         "quantity_selector",
         "price",
         "buy_buttons",
