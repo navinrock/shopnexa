@@ -307,9 +307,11 @@
           e.stopImmediatePropagation();
           const main_image = e.target.closest(".card-wrapper").querySelector(".card__media .media img");
           const newImage = e.target.src;
+          main_image.setAttribute("src", newImage);
+          main_image.removeAttribute("srcset");
           console.log(main_image);
           console.log(newImage);
-          main_image.setAttribute("src", newImage);
+         
         });
       });
     </script>
