@@ -135,7 +135,7 @@
           </div>
         </div>
       </div>
-      <div>
+      <div style="z-index:10; position:relative; display:flex;width:100%;gap:5px;"> 
         {%- for variant in card_product.variants -%}
           <img
             src="{{ variant.featured_image | image_url: width: 100 }}"
