@@ -137,9 +137,13 @@
       </div>
       <div>
         {%- for variant in card_product.variants -%}
-          <img src="{{ variant.featured_image | image_url: width: 100px }}" alt="{{ variant.title }}" />
+          <img
+            src="{{ variant.featured_image | image_url: width: 100 }}"
+            alt="{{ variant.title }}"
+          >
         {%- endfor -%}
       </div>
+
       <div class="card__content">
         <div class="card__information">
           <h3
