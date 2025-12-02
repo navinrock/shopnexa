@@ -1,6 +1,4 @@
- console.log("test");
-
- class VariantSwatches extends HTMLElement {
+class VariantSwatches extends HTMLElement {
     constructor() {
         super();
     }
