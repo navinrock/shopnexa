@@ -138,6 +138,7 @@
       <div style="z-index:10; position:relative; display:flex;width:100%;gap:5px;"> 
         {%- for variant in card_product.variants -%}
           <img
+            style="max-width:40px;object-fit:cover;"
             src="{{ variant.featured_image | image_url: width: 100 }}"
             alt="{{ variant.title }}"
           >
