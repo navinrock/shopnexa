@@ -255,17 +255,6 @@
 
     {% sections 'header-group' %}
 
-    <script>
-      class VariantSwatches extends HTMLElement {
-        constructor() {
-          super();
-          const images = this.querySelectorAll('img');
-          console.log(this);
-        }
-      }
-
-      customElements.define('variant-swatches', VariantSwatches);
-    </script>
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
       {{ content_for_layout }}
     </main>
