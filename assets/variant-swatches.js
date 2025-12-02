@@ -17,9 +17,6 @@ class VariantSwatches extends HTMLElement {
 
         main_image.setAttribute("src", newImage);
         main_image.removeAttribute("srcset");
-
-        console.log(main_image);
-        console.log(newImage);
       });
     });
   }
