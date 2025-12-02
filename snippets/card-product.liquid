@@ -136,8 +136,8 @@
         </div>
       </div>
       <div>
-        {%- for variant in product.variants -%}
-          <img src="{{ variant.featured_image | image_url: width: }}" alt="" />
+        {%- for variant in card_product.variants -%}
+          <img src="{{ variant.featured_image | image_url: width: 100px }}" alt="{{ variant.title }}" />
         {%- endfor -%}
       </div>
       <div class="card__content">
