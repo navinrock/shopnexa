@@ -3,7 +3,7 @@ class VariantSwatches extends HTMLElement {
         super();
     }
     connectedCallback(){
-        console.log(this.querySelectorAll(".swatch-images"));
+        console.log(this.querySelectorAll(".swatch-image"));
     }
 }
 customElements.define('variant-swatches', VariantSwatches);
