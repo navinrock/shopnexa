@@ -1,3 +1,5 @@
+ console.log("test");
+
  class VariantSwatches extends HTMLElement {
     constructor() {
         super();
