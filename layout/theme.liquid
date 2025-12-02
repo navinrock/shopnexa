@@ -305,7 +305,8 @@
         swatch.addEventListener('click', (e) => {
           e.preventDefault();
           e.stopImmediatePropagation();
-          console.log(e.target);
+          const main_image = e.target.closest(".card-wrapper").querySelector(".card__media .media image");
+          console.log(main_image);
         });
       });
     </script>
