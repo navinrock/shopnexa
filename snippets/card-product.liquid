@@ -135,9 +135,11 @@
           </div>
         </div>
       </div>
-      <pre>
-        HERE
-      </pre>
+      <div>
+        {%- for variant in product.variants -%}
+          <img src="{{ variant.featured_image | image_url: width: }}" alt="" />
+        {%- endfor -%}
+      </div>
       <div class="card__content">
         <div class="card__information">
           <h3
